@@ -106,7 +106,7 @@ function! s:showHover(result) abort
   let lines = []
 
 	if type(contents) != v:t_list
-		let lines = split(contents, "\n")
+		let lines = split(contents, "\n") + [""]
 	else
 		for item in contents
 			if type(item) == v:t_dict
